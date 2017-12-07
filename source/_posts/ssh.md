@@ -41,3 +41,10 @@ scp ~/.ssh/id_rsa.pub root@172.24.253.2:.ssh/id_rsa.pub
 ```
 ssh root@100.100.100.100 -vvv
 ```
+
+### ssh-agent ssh-add
+ssh-agent 是用于管理SSH private keys的, 长时间持续运行的守护进程（daemon）. 唯一目的就是对解密的私钥进行高速缓存。
+ssh-add 提示并将用户的使用的私钥添加到由ssh-agent 维护的列表中. 此后, 当使用公钥连接到远程 SSH 或 SCP 主机时,不再提示相关信息.
+````
+ssh-add ~/.ssh/yun
+```
